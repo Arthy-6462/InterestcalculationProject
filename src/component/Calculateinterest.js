@@ -41,7 +41,8 @@ const Calculateinterest = () => {
         const weekly = data.period;
         const weeklyinterest = data.rateofinterest / 100;
         const Wprincipalamount = data.principalamount;
-        const Wannualamount =Wprincipalamount * (1 + (weeklyinterest / 52) * weekly);
+        const Wannualamount =
+          Wprincipalamount * (1 + (weeklyinterest / 52) * weekly);
         setAnnualamount(Wannualamount);
         setRateofinterest(Wannualamount - Wprincipalamount);
 
@@ -51,7 +52,8 @@ const Calculateinterest = () => {
         const daily = data.period;
         const dailyinterest = data.rateofinterest / 100;
         const Dprincipalamount = data.principalamount;
-        const Dannualamount = Dprincipalamount * (1 + (dailyinterest / 365) * daily);
+        const Dannualamount =
+          Dprincipalamount * (1 + (dailyinterest / 365) * daily);
         setAnnualamount(Dannualamount);
         setRateofinterest(Dannualamount - Dprincipalamount);
         alert("day");
@@ -67,6 +69,7 @@ const Calculateinterest = () => {
   return (
     <div className="main-div">
       <form action="#" className="form" onSubmit={handleform}>
+        <h1>Simple interest calculator</h1>
         <div className=" input-div ">
           <label htmlFor="interest" id="interest">
             Interest type
@@ -126,8 +129,7 @@ const Calculateinterest = () => {
             onChange={(e) => setData({ ...data, period: e.target.value })}
           />
         </div>
-        <button
-          className="btn btn-success">submit</button>
+        <button className="btn btn-success">submit</button>
 
         <div className=" input-div">
           <div className="amount-div">
